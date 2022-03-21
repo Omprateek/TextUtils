@@ -42,7 +42,7 @@ function App() {
       setMode('light');
       document.body.style.backgroundColor='white';
       showAlert("Light mode has been Enabled","success");
-      document.title="TextUtilts - Light Mode";
+      // document.title="TextUtilts - Light Mode";
     }
   }
   
@@ -53,10 +53,10 @@ function App() {
     <Alert alert={alert}/>
     <div className="container my-3">
     <Routes>
-            <Route exact path="/about" element={<About />}>
+            <Route exact path="/about" element={<About mode={mode}/>}>
             </Route>
-            <Route exact path="/" element={<TextForm heading="Enter text to analyze"  mode={mode} showAlert={showAlert} />}>
-            <TextForm heading="Enter text to analyze"  mode={mode} showAlert={showAlert} />
+            <Route exact path="/" element={<TextForm heading="Try Textutils - Word Counter, Character Counter, Remove extra Spaces"  mode={mode} showAlert={showAlert} />}>
+            {/* <TextForm heading="Enter text to analyze"  mode={mode} showAlert={showAlert} /> */}
             </Route>
           </Routes>
     </div>
